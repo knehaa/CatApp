@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="A basic code training showcase featuring cats.">
+      <meta name="keywords" content="Cat, Photo App">
+      <meta name="author" content="Maria-Cristina Iosub">
+      <title>Cat Photos Incoming</title>
+      <link type="text/css" rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1> Cat Photo App </h1>
+    <main>
+      <section>
+        <img id="mainphoto" src="images/SleepingCat.jpeg" alt="Image of a sleeping cat.">
+        <br/>
+        <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+        <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+        <br/>
+        <div class="flex">
+          <fieldset class="cat-preferences"><legend>Things cats love:</legend>
+            <br/>
+            <input id="one" type="radio" name="items" value="one">
+            <label for="one">cat nip</label><br/>
+            <input id="two" type="radio" name="items" value="two">
+            <label for="two">laser pointers</label><br/>
+            <input id="three" type="radio" name="items" value="three">
+            <label for="three"><button class="js-modal-trigger" data-target="modal-js-example">Lasagna</button></label>
+          </fieldset>
+          <div class="cat-preferences"><p>Top 3 things cats hate:</p>
+            <br/>
+            <ol>
+              <li>Garfield</li>
+              <li>Sylvester</li>
+              <li>Showers</li>
+            </ol>
+          </div>
+        </div>
+        <div class="heart"></div>
+      </section> 
+      <br/>
+      <form id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
+          <br/>
+          <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br/><br/>
+          <legend>What's your cat's personality?</legend>
+            <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving"> Loving</label>
+            <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
+            <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br/>
+          <button type="submit">Submit</button>
+          <input type="text" placeholder="URL of a cat photo" required>
+      </form>
+      <br/><br/>
+      <section>
+        <p id="sr-only">Presented below are 3 pictures of the same white cat in different poses. Her name is Luna. She is lazy, but she is gentle.</p>
+        <div class="photos">
+          <figure>
+            <img class="catphoto" src="images/Overturned.png" alt="Image of a messy cat.">
+            <div class="marker yellow">
+              <div class="cap"></div>
+              <div class="sleeve"></div>
+            </div>
+            <figcaption>Oooppss ..</figcaption>
+          </figure>
+          <figure>
+            <img class="catphoto" src="images/ReflectingUponLife.png" alt="Image of a cat thinking about life.">
+            <div class="marker cyan">
+              <div class="cap"></div>
+              <div class="sleeve"></div>
+            </div>
+            <figcaption>Reflecting upon life.</figcaption>
+          </figure>
+          <figure>
+            <img class="catphoto" src="images/ShortNap.png" alt="Image of a cat napping.">
+            <div class="marker magenta">
+              <div class="cap"></div>
+              <div class="sleeve"></div>
+            </div>
+            <figcaption>Taking a short nap.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <br/>
+      <!-- Hidden Modal ... -->
+        <section id="modal-js-example" class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <div class="box">
+              <div class="modal-card-head">
+                <p class="modal-card-title">Nutrition Label</p>
+                <button class="delete" aria-label="close"></button>
+              </div>
+              <section class="modal-card-body">
+                <!-- Content ... -->
+                <div class="label">
+                  <h3 class="bold">Nutrition Facts for Lasagna with Meat & Sauce</h3>
+                  <div class="divider"></div>
+                  <p>1 Cup per container</p>
+                  <p class="bold">Serving Size <span class="right">1 cup (213g)</span></p>
+                  <div class="divider lg"></div>
+                  <div class="calories-info">
+                    <p class="bold sm-text">Amount per serving</p>
+                    <h3 class="bold">Calories <span class="right">280</span></h3>
+                  </div>
+                  <div class="divider md"></div>
+                  <div class="daily-value sm-text">
+                    <p class="right bold no-divider">% Daily Value *</p>
+                    <div class="divider"></div>
+                    <p><span class="bold">Total Fat</span> 11g<span class="bold right">-</span></p>
+                    <p class="indent no-divider">Saturated Fat 6g <span class="bold right">-</span></p>
+                    <div class="divider"></div>
+                    <p><span class="bold">Cholesterol</span> 30mg <span class="bold right"> - </span></p>
+                    <p><span class="bold">Sodium</span> 850mg <span class="bold right"> 36% </span></p>
+                    <p><span class="bold">Total Carbohydrate</span> 30g <span class="bold right"> - </span></p>
+                    <p><span class="bold no-divider">Protein</span> 16g <span class="bold right"> - </span></p>
+                    <p><span class="bold">Vitamins and Minerals</span> 30g <span class="bold right"> - </span></p>
+                    <p class="dbl-indent no-divider">Vitamin A 90μg <span class="bold right">10%</span></p>
+                    <div class="divider"></div>
+                    <p class="dbl-indent no-divider">Vitamin C 7.2mg <span class="bold right">12%</span></p>
+                    <div class="divider"></div>
+                    <p class="dbl-indent no-divider">Calcium 200mg <span class="bold right">20%</span></p>
+                    <div class="divider"></div>
+                    <p class="dbl-indent no-divider">Iron 0.5mg <span class="bold right">6%</span></p>
+                    <div class="divider md"></div>
+                    <p class="note">* The Percent Daily Values tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice. </p>
+                    <div class="divider lg"></div>
+                  </div>
+                </div>
+                <!-- Content ... -->
+              </section>
+              <div class="modal-card-foot">
+                <button class="button">Cancel</button>
+              </div>
+            </div>
+          </div>
+          <button class="modal-close is-large" aria-label="close"></button>
+        </section>
+    </main> 
+    <p>Click here to view more <a href="https://www.pinterest.com/FeliniRocks/cat-photography/" class="cat-link" accesskey="c" target="_blank"><strong>cat photos</strong></a>.</p>
+    <footer id="copyright"> &copy;<span id="year"></span> Maria-Cristina Iosub.</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
